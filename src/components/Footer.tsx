@@ -45,9 +45,9 @@ export const Footer = () => {
           <div>
             <h3 className="font-bold text-lg mb-4">Contact</h3>
             <ul className="space-y-2 text-gray-400">
-              <li>📧 kavikaushik@example.com</li>
+              <li>📧 kavikaushik9675@gmail.com</li>
               <li>📱 WhatsApp Support</li>
-              <li>🎓 DTU Student</li>
+              <li>🎓 3rd year DTU Student</li>
               <li>📍 Delhi, India</li>
             </ul>
           </div>

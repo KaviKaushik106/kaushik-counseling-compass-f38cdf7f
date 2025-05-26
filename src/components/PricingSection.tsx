@@ -99,12 +99,12 @@ export const PricingSection = () => {
                 ))}
               </ul>
               
-              <Button 
+              {/* <Button 
                 onClick={scrollToForm}
                 className={`w-full py-3 ${pkg.popular ? 'bg-blue-600 hover:bg-blue-700' : 'bg-gray-800 hover:bg-gray-900'} text-white font-semibold rounded-lg`}
               >
                 Get Started
-              </Button>
+              </Button> */}
             </div>
           ))}
         </div>
@@ -129,12 +129,12 @@ export const PricingSection = () => {
                 <Badge className="bg-green-400 text-green-900 px-2 py-1 font-bold">50% OFF</Badge>
               </div>
               
-              <Button 
+              {/* <Button 
                 onClick={scrollToForm}
                 className="bg-white text-purple-600 hover:bg-gray-100 font-semibold px-8 py-3 rounded-lg"
               >
                 Claim Bonus Offer
-              </Button>
+              </Button> */}
             </div>
             
             <div className="space-y-3">

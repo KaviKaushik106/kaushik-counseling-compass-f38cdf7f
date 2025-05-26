@@ -34,7 +34,7 @@ export const FormCTASection = () => {
             
             <Button 
               className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 text-lg font-semibold rounded-lg"
-              onClick={() => window.open('https://forms.google.com/d/e/1FAIpQLSe_example/viewform', '_blank')}
+              onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSdrAMpvVysbn4p0a11BuLclzpdqvU-4ljGaEwRXgrsth70wvQ/viewform?usp=header', '_blank')}
             >
               Fill Counseling Form Now
             </Button>
