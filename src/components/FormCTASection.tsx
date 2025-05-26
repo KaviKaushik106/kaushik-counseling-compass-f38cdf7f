@@ -28,12 +28,6 @@ export const FormCTASection = () => {
       title: "Scholarship Application Tips",
       thumbnail: "photo-1507003211169-0a1dd7228f2d",
       youtubeUrl: "https://youtube.com/watch?v=example4"
-    },
-    {
-      id: 5,
-      title: "Career Guidance Session",
-      thumbnail: "photo-1521737604893-d14cc237f11d",
-      youtubeUrl: "https://youtube.com/watch?v=example5"
     }
   ];
 
