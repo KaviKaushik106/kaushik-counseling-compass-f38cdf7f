@@ -2,8 +2,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Star } from "lucide-react";
-
-
 export const PricingSection = () => {
   const packages = [
     {
