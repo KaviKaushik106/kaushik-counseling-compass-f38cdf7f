@@ -21,7 +21,7 @@ export const CommunitySection = () => {
             </p>
             <Button 
               className="w-full bg-green-600 hover:bg-green-700 text-white"
-              onClick={() => window.open('https://chat.whatsapp.com/example', '_blank')}
+              onClick={() => window.open('https://chat.whatsapp.com/FGlhXzdsCimIZYACDkJz53', '_blank')}
             >
               Join WhatsApp Group
             </Button>
@@ -35,7 +35,7 @@ export const CommunitySection = () => {
             </p>
             <Button 
               className="w-full bg-blue-600 hover:bg-blue-700 text-white"
-              onClick={() => window.open('https://t.me/example', '_blank')}
+              onClick={() => window.open('https://t.me/+2nvS1E_E3e85ZmFl', '_blank')}
             >
               Join Telegram Group
             </Button>

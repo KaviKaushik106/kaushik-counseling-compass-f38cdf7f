@@ -1,47 +1,60 @@
-
 import { Youtube } from "lucide-react";
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
-import { useEffect, useRef } from "react";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi } from "@/components/ui/carousel";
+import { useEffect, useRef, useState } from "react";
 
 export const FormCTASection = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [api, setApi] = useState<CarouselApi>();
   const videos = [
     {
       id: 1,
-      title: "How to Choose the Right College",
-      thumbnail: "photo-1649972904349-6e44c42644a7",
-      youtubeUrl: "https://youtube.com/watch?v=example1"
+      title: "Jac Delhi EWS Certificate Doubt",
+      thumbnail: "/EWS-CERTIFICATE-DOUBT.png",
+      youtubeUrl: "https://youtube.com/shorts/XQBc4Fl-sQg?si=5eQy8jlo8ZR4ROKD"
     },
     {
       id: 2,
-      title: "Complete Counseling Guide",
-      thumbnail: "photo-1488590528505-98d2b5aba04b", 
-      youtubeUrl: "https://youtube.com/watch?v=example2"
+      title: "Jac Delhi OBC Certificate Doubts",
+      thumbnail: "/OBC-CERTIFICATE-DOUBT.png",
+      youtubeUrl: "https://youtu.be/U_rYY5tjrsk?si=YmTdAG28Kz0fd64G"
     },
     {
       id: 3,
-      title: "Admission Process Explained",
-      thumbnail: "photo-1518770660439-4636190af475",
-      youtubeUrl: "https://youtube.com/watch?v=example3"
+      title: "Choice Filling Order Explained",
+      thumbnail: "/freechoice-filling-order.png",
+      youtubeUrl: "https://youtu.be/8m0kNmUnV8g?si=2s0nyTwlWFwyak2A"
     },
-    {
-      id: 4,
-      title: "Scholarship Application Tips",
-      thumbnail: "photo-1507003211169-0a1dd7228f2d",
-      youtubeUrl: "https://youtube.com/watch?v=example4"
-    }
+    // {
+    //   id: 4,
+    //   title: "Scholarship Application Tips",
+    //   thumbnail: "/IMG_0702.png",
+    //   youtubeUrl: "https://youtube.com/watch?v=example4"
+    // }
   ];
 
-  const carouselRef = useRef<any>(null);
+  useEffect(() => {
+    if (!api) return;
+
+    api.on("select", () => {
+      setCurrentSlide(api.selectedScrollSnap());
+    });
+  }, [api]);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (carouselRef.current?.api) {
-        carouselRef.current.api.scrollNext();
+      if (api) {
+        api.scrollNext();
       }
-    }, 3000); // Auto-scroll every 3 seconds
+    }, 7000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [api]);
+
+  const handleSlideChange = (index: number) => {
+    if (api) {
+      api.scrollTo(index);
+    }
+  };
 
   return (
     <section id="form-section" className="py-16 px-4 bg-blue-50 overflow-hidden">
@@ -61,37 +74,40 @@ export const FormCTASection = () => {
           <div className="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-blue-50 to-transparent z-10 pointer-events-none"></div>
           
           <Carousel
-            ref={carouselRef}
+            setApi={setApi}
             opts={{
-              align: "start",
+              align: "center",
               loop: true,
               skipSnaps: false,
+              containScroll: "trimSnaps"
             }}
             className="w-full"
           >
             <CarouselContent className="-ml-2 md:-ml-4">
               {videos.map((video) => (
-                <CarouselItem key={video.id} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4">
-                  <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in">
+                <CarouselItem key={video.id} className="pl-2 md:pl-4 basis-full">
+                  <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in max-w-2xl mx-auto">
                     <div className="relative group cursor-pointer" onClick={() => window.open(video.youtubeUrl, '_blank')}>
-                      <img 
-                        src={`https://images.unsplash.com/${video.thumbnail}?w=400&h=225&fit=crop`}
-                        alt={video.title}
-                        className="w-full h-48 object-cover"
-                      />
+                      <div className="aspect-video w-full overflow-hidden">
+                        <img 
+                          src={video.thumbnail}
+                          alt={video.title}
+                          className="w-full h-full object-contain bg-gray-100"
+                        />
+                      </div>
                       <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
-                        <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                          <Youtube className="w-8 h-8 text-white ml-1" />
+                        <div className="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                          <Youtube className="w-10 h-10 text-white ml-1" />
                         </div>
                       </div>
                     </div>
-                    <div className="p-6">
-                      <h3 className="text-xl font-semibold text-gray-900 mb-2">{video.title}</h3>
+                    <div className="p-8">
+                      <h3 className="text-2xl font-semibold text-gray-900 mb-4">{video.title}</h3>
                       <button 
                         onClick={() => window.open(video.youtubeUrl, '_blank')}
-                        className="text-blue-600 hover:text-blue-700 font-medium flex items-center gap-2"
+                        className="text-blue-600 hover:text-blue-700 font-medium flex items-center gap-2 text-lg"
                       >
-                        <Youtube className="w-4 h-4" />
+                        <Youtube className="w-5 h-5" />
                         Watch on YouTube
                       </button>
                     </div>
@@ -99,7 +115,23 @@ export const FormCTASection = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
+            <CarouselPrevious className="hidden md:flex" />
+            <CarouselNext className="hidden md:flex" />
           </Carousel>
+
+          {/* Pagination Dots */}
+          <div className="flex justify-center items-center gap-2 mt-6">
+            {videos.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => handleSlideChange(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  currentSlide === index ? 'bg-blue-600 scale-125' : 'bg-gray-300 hover:bg-gray-400'
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
