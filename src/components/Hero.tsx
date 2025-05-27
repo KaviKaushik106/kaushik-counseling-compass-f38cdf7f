@@ -28,7 +28,7 @@ export const Hero = () => {
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
           <Button 
-            onClick={scrollToForm}
+            onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSdrAMpvVysbn4p0a11BuLclzpdqvU-4ljGaEwRXgrsth70wvQ/viewform?usp=header', '_blank')}
             className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg transition-all duration-200 transform hover:scale-105"
           >
             Fill Counseling Form Now

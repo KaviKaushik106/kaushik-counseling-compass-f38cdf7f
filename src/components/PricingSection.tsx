@@ -30,7 +30,7 @@ export const PricingSection = () => {
       popular: true
     },
     {
-      name: "IPU Choice Filling Only",
+      name: "IPU/JAC Choice Filling Only",
       price: "₹249",
       description: "Quick help with preference order",
       features: [

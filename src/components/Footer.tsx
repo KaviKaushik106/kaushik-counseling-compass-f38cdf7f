@@ -1,4 +1,3 @@
-
 export const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white py-12 px-4">
@@ -8,7 +7,7 @@ export const Footer = () => {
             "Your one decision now can shape your next 4 years. 
             Let's make it the right one — together."
           </blockquote>
-          <div className="text-blue-400 font-semibold">– Kavi Kaushik</div>
+          <div className="text-blue-400 font-semibold">– Kavi Kaushik (3rd year DTU)</div>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
@@ -45,10 +44,15 @@ export const Footer = () => {
           <div>
             <h3 className="font-bold text-lg mb-4">Contact</h3>
             <ul className="space-y-2 text-gray-400">
-              <li>📧 kavikaushik9675@gmail.com</li>
-              <li>📱 WhatsApp Support</li>
-              <li>🎓 3rd year DTU Student</li>
-              <li>📍 Delhi, India</li>
+              <li><a href="mailto:kavikaushik9675@gmail.com" className="hover:text-white transition-colors">📧 kavikaushik9675@gmail.com</a></li>
+              <li><a href="https://api.whatsapp.com/send/?phone=919675316488&text&type=phone_number&app_absent=0" className="hover:text-white transition-colors flex items-center gap-2">
+                <img src="/whatsapp-icon.png" alt="Instagram Icon" className="w-5 h-5 inline-block" />
+                Whatsapp support
+              </a></li>
+              <li><a href="https://www.instagram.com/kavikaushik_/?utm_source=ig_web_button_share_sheet" className="hover:text-white transition-colors flex items-center gap-2">
+                <img src="/instagram-icon.png" alt="Instagram Icon" className="w-5 h-5 inline-block" />
+                Instagram
+              </a></li>
             </ul>
           </div>
         </div>
