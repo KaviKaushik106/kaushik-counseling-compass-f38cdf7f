@@ -7,7 +7,7 @@ export const WhyChooseSection = () => {
     },
     {
       title: "Personally Helped 100+ Aspirants",
-      description: "Proven track record of successful counseling and admissions"
+      description: "Proven track record of successful counselling and admissions"
     },
     {
       title: "Fully Honest, No Copy-Paste Advice",

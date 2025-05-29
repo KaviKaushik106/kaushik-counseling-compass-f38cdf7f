@@ -14,7 +14,7 @@ export const Footer = () => {
           <div>
             <h3 className="font-bold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-white transition-colors">JAC Delhi Counseling</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">JAC Delhi Counselling</a></li>
               <li><a href="#" className="hover:text-white transition-colors">IPU Counseling</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Pricing</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Community</a></li>
@@ -24,7 +24,7 @@ export const Footer = () => {
           <div>
             <h3 className="font-bold text-lg mb-4">Services</h3>
             <ul className="space-y-2 text-gray-400">
-              <li>1-on-1 Counseling</li>
+              <li>1-on-1 Counselling</li>
               <li>Choice Filling Strategy</li>
               <li>College Selection</li>
               <li>First Year Mentorship</li>
