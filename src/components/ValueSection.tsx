@@ -2,7 +2,7 @@ import { CheckCircle } from "lucide-react";
 
 export const ValueSection = () => {
   const benefits = [
-    "1-on-1 WhatsApp or call-based counseling",
+    "1-on-1 WhatsApp or call-based counselling",
     "Correct choice filling order for your rank",
     "Help avoiding fake paid counsellor scams",
     "College & branch selection advice",

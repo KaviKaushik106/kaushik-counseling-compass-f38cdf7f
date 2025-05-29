@@ -18,7 +18,7 @@ export const Hero = () => {
         
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
           Confused About <span className="text-blue-600">JAC Delhi</span> or{" "}
-          <span className="text-indigo-600">IPU Counseling</span> 2025?
+          <span className="text-indigo-600">IPU Counselling</span> 2025?
         </h1>
         
         <p className="text-xl sm:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
@@ -31,7 +31,7 @@ export const Hero = () => {
             onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSdrAMpvVysbn4p0a11BuLclzpdqvU-4ljGaEwRXgrsth70wvQ/viewform?usp=header', '_blank')}
             className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg transition-all duration-200 transform hover:scale-105"
           >
-            Fill Counseling Form Now
+            Fill Counselling Form Now
           </Button>
           <div className="text-sm text-gray-500 flex items-center gap-2">
             <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>

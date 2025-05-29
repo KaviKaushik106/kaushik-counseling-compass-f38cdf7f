@@ -7,7 +7,7 @@ export const PricingSection = () => {
     {
       name: "JAC Delhi Full Support",
       price: "₹499",
-      description: "Complete guidance for JAC Delhi counseling",
+      description: "Complete guidance for JAC Delhi counselling",
       features: [
         "WhatsApp + Call Support",
         "Choice Filling Strategy",
@@ -17,9 +17,9 @@ export const PricingSection = () => {
       popular: false
     },
     {
-      name: "IPU Full Counseling Support",
+      name: "IPU Full Counselling Support",
       price: "₹499", 
-      description: "Comprehensive IPU counseling assistance",
+      description: "Comprehensive IPU counselling assistance",
       features: [
         "Rank Analysis & Strategy",
         "College Selection Guidance", 
